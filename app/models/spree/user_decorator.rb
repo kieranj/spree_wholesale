@@ -2,7 +2,7 @@ Spree::User.instance_eval do
 
   has_one :wholesaler, :class_name => "Spree::Wholesaler"
 
-  scope :wholesale, lambda { includes(:roles).where("spree_roles.name" => "wholesaler") }
+  scope :wholesale, lambda { includes(:spree_roles).where("spree_roles.name" => "wholesaler") }
 
 
 end
