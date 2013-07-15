@@ -36,7 +36,7 @@ class Spree::Wholesaler < ActiveRecord::Base
   end
 
   def active?
-    user && user.has_role?("wholesaler")
+    user && user.has_spree_role?("wholesaler")
   end
 
   def self.term_options
