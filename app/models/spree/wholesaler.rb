@@ -40,7 +40,7 @@ class Spree::Wholesaler < ActiveRecord::Base
   end
 
   def self.term_options
-    %(Net 10, Net 15, Net 30, COD, Credit Card).split(", ")
+    %(Proforma, Net 30, Net 60).split(", ")
   end
 
   private
