@@ -16,7 +16,7 @@ class Spree::Wholesaler < ActiveRecord::Base
 
   attr_accessor :use_billing
   before_validation :clone_billing_address, :if => "@use_billing"
-  validates :company, :buyer_contact, :manager_contact, :phone, :taxid, :presence => true
+  validates :company, :buyer_contact, :manager_contact, :phone, :presence => true
 
   delegate_belongs_to :user, :spree_roles
   delegate_belongs_to :user, :email
